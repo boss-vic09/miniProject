@@ -1,6 +1,13 @@
 import './App.css';
 import {useState} from 'react';
 
+function Button({text, onClick}){
+  
+  return(
+      <button className="button" onClick={onClick} >{text}</button>
+  );
+}
+
 function App() {
  const [count, setCount] = useState(0);
  const [message, setMessage] = useState('');   // message to show errors or limit notices
@@ -12,7 +19,6 @@ function App() {
       setMessage("Can't go below 00"); // Show message if limit reached
     } else {
       setCount(count - 1);               // decrease the count
-      setMessage('');                    // Clear any previous message
     }
   };
   
@@ -22,7 +28,6 @@ function App() {
       setMessage("Can't go above 1000"); // Show message if limit reached
     } else {
       setCount(count + 1);               // Increase the count
-      setMessage('');                    // Clear any previous message
     }
   };
   
