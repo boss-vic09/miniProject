@@ -1,6 +1,8 @@
 import './App.css';
 import {useState} from 'react';
 
+
+//COUNTER APP
 function Button({text, onClick}){
   
   return(
